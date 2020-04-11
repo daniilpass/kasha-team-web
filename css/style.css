@@ -1,0 +1,59 @@
+body {
+    background-color: rgb(51,51,51);
+}
+
+header .jumbotron{
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+header .jumbotron .lead{
+    color: #919191;
+}
+
+.find-us {
+    background-color: #ffffff;
+    padding-top: 24px;
+    padding-bottom: 12px;
+}
+
+.find-us h2{
+    text-align: center;
+    color: #595959;
+}
+
+.find-us .col {
+    text-align: center;
+    padding: 12px;
+}
+
+.find-us .col img{
+    margin-bottom: 12px;
+}
+
+.find-us .link-button{
+    margin: 0 auto;
+}
+
+.link-button{    
+    max-width: 223;
+    display: block;
+    padding: 16px;
+    border: solid 1px #000000;    
+    color: #000000;
+}
+
+.link-button:hover{  
+    background-color: #000000;
+    color: rgb(198, 198, 198);
+    border: solid 1px rgb(198, 198, 198);
+    text-decoration: none;
+    
+}
+
+footer{
+    color: #A9A9A9;
+    padding: 12px 40px;
+}
