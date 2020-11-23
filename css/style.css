@@ -3,14 +3,14 @@ body {
 }
 
 header .jumbotron{
-    background-color: red;
+    background-color: black;
     color: white;
     text-align: center;
     margin: 0;
 }
 
 header .jumbotron .lead{
-    color: #919991;
+    color: #919191;
 }
 
 .find-us {
