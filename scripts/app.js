@@ -18,7 +18,7 @@ function initVideo(video) {
 }
 
 function addVideoEvents(video) {
-    video.addEventListener('loadeddata', function () {
+    video.addEventListener('playing', function () {
         videoLoaded(video);
     });
 
