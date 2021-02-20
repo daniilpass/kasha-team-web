@@ -113,11 +113,5 @@ footer a:hover{
     min-height: 100%;
     position: fixed;
     opacity: 0;    
-    z-index: -1;
-    transition: opacity 2s;
-    -webkit-transition: opacity 2s;
-}
-
-#video-cs.loaded {
-    opacity: 0.5;    
+    z-index: -1;    
 }
