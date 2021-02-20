@@ -3,22 +3,23 @@ const videoEnd = 150;
 const videoPlaybackRate = 0.8;
 
 window.onload = function() {
-    let video = getVideo(); 
-    initVideo(video);
-    addVideoEvents(video);
-    startVideo(video);
+    let video = getVideo();     
+    addVideoEvents(video); 
+    setUpAndLoadVideo(video);
 }
 
 function getVideo() {
     return document.getElementById("video-cs");
 }
 
-function initVideo(video) {
-    video.playbackRate = videoPlaybackRate;
+function setUpAndLoadVideo(video) {
+    video.playbackRate = videoPlaybackRate;       
+    video.load();
 }
 
 function addVideoEvents(video) {
-    video.addEventListener('playing', function () {
+    video.addEventListener('loadeddata', function () {
+        startVideo(video);
         videoLoaded(video);
     });
 
