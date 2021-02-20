@@ -1,36 +1,70 @@
+:root {
+    --background: rgb(32, 34, 37);
+    --background-floating: #36393fb8;
+    --text-primary:#ffffff;
+    --text-secondary: #d1d1d1;
+    --button: #DBD000;
+    --button-hover: #C8BE00;
+    --button-text: #ffffff;
+    --button-text-hover: #ffffff;
+    --footer-link: #A49C00;
+    --footer-link-hover: #B6AD00;
+}
+
 body {
-    background-color: rgb(51,51,51);
+    background-color: var(--background);
 }
 
 header .jumbotron{
-    background-color: black;
-    color: white;
+    background-color: transparent;
+    color: var(--text-primary);
     text-align: center;
     margin: 0;
 }
 
 header .jumbotron .lead{
-    color: #919191;
+    color: var(--text-secondary);
 }
 
 .find-us {
-    background-color: #ffffff;
-    padding-top: 24px;
+    overflow: hidden;
+    position: relative;
+    /* padding-top: 24px; */
     padding-bottom: 12px;
 }
 
-.find-us h2{
+/* .find-us h2{
     text-align: center;
     color: #595959;
-}
+} */
 
 .find-us .col {
+    background-color: var(--background-floating);
+    margin: 32px;
+    padding: 32px;
     text-align: center;
-    padding: 12px;
+
+    box-shadow: 0 2px 10px 0 rgb(0 0 0 / 20%);
+    -webkit-box-shadow: 0 2px 10px 0 rgb(0 0 0 / 20%);
+    border-radius: 5px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .find-us .col img{
-    margin-bottom: 12px;
+    opacity: 0.8;
+    margin-bottom: 32px;
+    width: 200px;
+}
+.find-us .col:hover img{
+    opacity: 1;
+}
+
+.find-us .col .link-button{
+    opacity: 0.8;
+}
+.find-us .col:hover .link-button{
+    opacity: 1;
 }
 
 .find-us .link-button{
@@ -40,20 +74,50 @@ header .jumbotron .lead{
 .link-button{    
     max-width: 223;
     display: block;
-    padding: 16px;
-    border: solid 1px #000000;    
-    color: #000000;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: var(--button);
+    font-weight: bold;
+    color: var(--button-text);
+    font-size: 24px;
 }
 
 .link-button:hover{  
-    background-color: #000000;
-    color: rgb(198, 198, 198);
-    border: solid 1px rgb(198, 198, 198);
+    background-color:  var(--button-hover);
+    color: var(--button-text-hover);
     text-decoration: none;
-    
 }
 
 footer{
-    color: #A9A9A9;
-    padding: 12px 40px;
+    color: var(--text-secondary);
+    padding: 64px 40px 12px 40px;
+    text-align: center;
+}
+
+footer a{
+    color: var(--footer-link);
+}
+
+footer a:hover{
+    color: var(--footer-link-hover);
+    text-decoration: none;
+}
+
+.video-background {
+    position: relative;
+    overflow: hidden;
+}
+
+#video-cs {
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    opacity: 0;    
+    z-index: -1;
+    transition: opacity 2s;
+    -webkit-transition: opacity 2s;
+}
+
+#video-cs.loaded {
+    opacity: 0.5;    
 }
