@@ -115,3 +115,8 @@ footer a:hover{
     opacity: 0;    
     z-index: -1;    
 }
+
+/* LOGO*/
+#logo{
+    transform: scale(1.2) perspective(500px) rotateY(0deg) rotateX(0deg);
+}
