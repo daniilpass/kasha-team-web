@@ -1,13 +1,19 @@
 
 
 window.onload = function() {
+    //check mobile
+    var isMobile = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)
+    
     //video
     let video = getVideo();     
     addVideoEvents(video); 
     setUpAndLoadVideo(video);
-
-    //logo
-    addLogoEvents();
+    
+    if (!isMobile) {
+        //logo
+        addLogoEvents();
+    }
+    
 }
 
 /*
